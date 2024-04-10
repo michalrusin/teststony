@@ -1,0 +1,375 @@
+:root{
+  --bg: #e5e3dc;
+  --link-color: #e2e2dc;
+  --overlay-bg: #0a0a0a;
+  --dark-color: rgb(rgb(0, 240, 0)27);
+  --light-color: rgb(51, 146, 27);
+  --base: rgb(51, 146, 27);
+  --complimentary1: rgb(14, 71, 0);
+  --complimentary2: rgb(51, 146, 27);
+
+  --font-family: "Poppins", system-ui;
+
+  --bg-gradient: linear-gradient(
+    to right,
+    hsl(147, 30%, 56%),
+    rgb(51, 146, 27)
+  );
+}
+html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  max-width: 1920px;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  font-family: var(--font-family);
+  color: var(--dark-color);
+  background: var(--bg-gradient);
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+
+
+
+
+#container3D canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  top: 10em;
+  left: 20vw;
+  
+  z-index: 1;
+ 
+}
+
+
+
+/*.overlay{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left:0;
+  z-index: 0;
+}
+
+svg path {
+  fill: var(--overlay-bg);
+}
+
+#toggle-btn{
+  position:absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.btn-outline{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--overlay-bg);
+}
+.btn-outline1{
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 4s linear infinite;
+}
+.btn-outline2{
+  border-radius: 53% 47% 43% 57% / 51% 39% 61% 49%;
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50%{
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100%{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+#burger{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+}
+
+#burger span{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 24px;
+  height: 1.25px;
+  background: var(--overlay-bg);
+  transition: transform 0.25s;
+}
+#burger span::before{
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 1.25px;
+  background: var(--overlay-bg);
+  transform: translateY(-4px);
+  transition: transform 0.25s;
+}
+#burger .active span{
+  transform: rotate(45deg);
+}
+#burger .active span::before{
+  top: unset;
+  width: 24px;
+  transform: rotate(-90deg);
+  
+}
+
+.menu{
+  position:fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  
+}
+.menu > div{
+  height: 100%;
+  display: flex;
+}
+
+.menu a{
+  position: relative;
+  top: 120px;
+  line-height: 70%;
+  text-decoration: none;
+  color: var(--link-color);
+}
+.menu a {
+  font-size: 20px;
+  margin-right: 2em;
+}
+.menu-item{
+  position: relative;
+}
+.menu-item:after{
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 120%;
+  height: 200%;
+  margin: 0 auto;
+}
+
+.menu-container{
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.primary-menu{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-menu .menu-container .wrapper{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.primary-menu a{
+  text-transform: uppercase;
+  font-size: 125px;
+  font-weight: 500;
+}
+
+
+*/
+
+
+/*next*/
+.orb-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 1140px;
+  height: 440px;
+  padding: 8rem 6rem;
+  
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.overlay__inner {
+  max-width: 36rem;
+}
+
+.overlay__title {
+  font-size: 1.875rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    45deg,
+    green,
+    rgb(0, 49, 15)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.overlay__description {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.overlay__btns {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+}
+
+.overlay__btn {
+  width: 50%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--light-color);
+  background: var(--dark-color);
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 150ms ease;
+  outline-color: hsl(var(--hue), 95%, 50%);
+}
+
+.overlay__btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.overlay__btn--transparent {
+  background: transparent;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  border-width: 2px;
+  margin-right: 0.75rem;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Not too many browser support this yet but it's good to add! */
+@media (prefers-contrast: high) {
+  .orb-canvas {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .overlay {
+    padding: 8rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .overlay {
+    padding: 4rem;
+    height: auto;
+  }
+
+  .overlay__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .overlay__description {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay {
+    padding: 1.5rem;
+  }
+
+  .overlay__btns {
+    flex-wrap: wrap;
+  }
+
+  .overlay__btn {
+    width: 100%;
+    font-size: 0.75rem;
+    margin-right: 0;
+  }
+
+  .overlay__btn:first-child {
+    margin-bottom: 1rem;
+  }
+}
